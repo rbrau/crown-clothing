@@ -1,3 +1,5 @@
+/* MAIN STYLES FOR THE ENTIRE PAGE */
+
 body {
 	margin: 0;
 	font-family: 'Encode Sans Condensed', sans-serif;
@@ -8,4 +10,15 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+/* ANCHOR TAGS 'a' */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* SELECTOR THAT MATCHES EVERYTHING*/
+* {
+	box-sizing: border-box;
 }
