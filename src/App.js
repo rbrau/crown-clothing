@@ -1,38 +1,20 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigation.component';
+import Authentication from './routes/authentication/authentication.component';
+import Shop from './routes/shop/shop.component';
+import Checkout from './routes/checkout/checkout.component';
+
 const App = () => {
-	const categories = [
-		{
-			id: 1,
-			title: 'Hats',
-		},
-		{
-			id: 1,
-			title: 'Jackets',
-		},
-		{
-			id: 1,
-			title: 'Sneakers',
-		},
-		{
-			id: 1,
-			title: 'Men',
-		},
-		{
-			id: 1,
-			title: 'Women',
-		},
-	];
 	return (
-		<div className='categories-container'>
-			{categories.map(({ title }) => (
-				<div className='category-container'>
-					<div className='background-image' />
-					<div className='category-body-container'>
-						<h2>{title}</h2>
-						<p>Shop Now</p>
-					</div>
-				</div>
-			))}
-		</div>
+		<Routes>
+			<Route path='/' element={<Navigation />}>
+				<Route index element={<Home />} />
+				<Route path='shop/*' element={<Shop />} />
+				<Route path='authentication' element={<Authentication />} />
+				<Route path='checkout' element={<Checkout />} />
+			</Route>
+		</Routes>
 	);
 };
 
